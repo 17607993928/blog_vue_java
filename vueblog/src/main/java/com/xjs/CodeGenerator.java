@@ -28,7 +28,7 @@ public class CodeGenerator {
     public static String scanner(String tip) {
         Scanner scanner = new Scanner(System.in);
         StringBuilder help = new StringBuilder();
-        help.append("请输入" + tip + "：");
+        help.append("请输入" + tip + ":：");
         System.out.println(help.toString());
         if (scanner.hasNext()) {
             String ipt = scanner.next();
