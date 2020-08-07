@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+  configuration:
+    jdbc-type-for-null: 'null'
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #日志
+
+#json web token 配置
+jwt:
+  secret: f4e2e52034348f86b67cde581c0f9eb5 # 加密秘钥
+  expire: 60480 # token有效时长，7天，单位秒
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1.6379
+    password: 123456
+
